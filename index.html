@@ -22,18 +22,11 @@
   <body>
     <header class="site-header">
       <a class="brand" href="#top" aria-label="Выкуп долей в Воронеже">
-        <span class="brand-mark" aria-hidden="true">
-          <span class="roof roof-blue"></span>
-          <span class="roof roof-gold"></span>
-          <span class="house-body"></span>
-        </span>
-        <span>
-          <strong>Выкуп долей</strong>
-          <small>в Воронеже</small>
-        </span>
+        <img class="brand-logo" src="assets/logo-reference.png" alt="Выкуп долей в Воронеже" />
       </a>
 
       <nav class="main-nav" aria-label="Основная навигация">
+        <a class="is-active" href="#top">Главная</a>
         <a href="#buy">Что выкупаем</a>
         <a href="#process">Как проходит сделка</a>
         <a href="#trust">Преимущества</a>
@@ -45,7 +38,7 @@
         <a href="mailto:vykup1rf@yandex.ru"><i data-lucide="mail"></i>vykup1rf@yandex.ru</a>
       </div>
 
-      <a class="header-cta" href="#estimate">Получить оценку</a>
+      <a class="header-cta estimate-trigger" href="#estimate-modal">Получить оценку</a>
       <button class="menu-toggle" type="button" aria-label="Открыть меню" aria-expanded="false">
         <i data-lucide="menu"></i>
       </button>
@@ -54,21 +47,15 @@
     <main id="top">
       <section class="hero" aria-labelledby="hero-title">
         <div class="container hero-grid">
-          <div class="hero-media" aria-hidden="true">
-            <span class="media-badge media-badge-left">Выкуп до 90% от рынка</span>
-            <span class="media-badge media-badge-right">Деньги в день сделки</span>
-          </div>
-
           <div class="hero-panel">
             <div class="hero-copy">
-              <p class="eyebrow">Воронеж и область</p>
-              <h1 id="hero-title"><strong>Срочный выкуп</strong> долей в квартирах <span>в Воронеже</span></h1>
+              <h1 id="hero-title">Срочный выкуп долей в квартирах <span>в Воронеже</span></h1>
               <p class="lead">
                 <strong>Деньги за 1 день.</strong> Выкупаем доли, комнаты и проблемную недвижимость,
                 даже с долгами, арестами и конфликтами.
               </p>
               <div class="hero-actions">
-                <a class="button button-primary" href="#estimate">
+                <a class="button button-primary estimate-trigger" href="#estimate-modal">
                   Получить оценку за 5 минут
                   <i data-lucide="send"></i>
                 </a>
@@ -79,19 +66,13 @@
               </div>
               <ul class="assurance-list" aria-label="Условия консультации">
                 <li><i data-lucide="shield-check"></i>Консультация бесплатно</li>
-                <li><i data-lucide="badge-check"></i>Без скрытых рисков</li>
+                <li><i data-lucide="badge-check"></i>Никаких рисков</li>
                 <li><i data-lucide="lock-keyhole"></i>Полная конфиденциальность</li>
               </ul>
             </div>
-
           </div>
-        </div>
-      </section>
 
-      <section class="estimate-section">
-        <div class="container">
           <aside class="estimate-card" id="estimate" aria-labelledby="estimate-title">
-            <p class="form-eyebrow">Бесплатная оценка</p>
             <h2 id="estimate-title">Узнайте цену вашей доли</h2>
             <form class="estimate-form">
               <label>
@@ -140,162 +121,177 @@
               <p class="form-status" role="status" aria-live="polite"></p>
             </form>
           </aside>
-        </div>
-      </section>
 
-      <section class="quick-facts" aria-label="Основные преимущества">
-        <div class="container facts-grid">
-          <article>
-            <img class="fact-icon" src="assets/icon-cash-3d.png" alt="" aria-hidden="true" />
-            <strong>До 90% от рынка</strong>
-            <span>Честная оценка<br />вашей доли</span>
-          </article>
-          <article>
-            <img class="fact-icon" src="assets/icon-calendar-3d.png" alt="" aria-hidden="true" />
-            <strong>Деньги в день сделки</strong>
-            <span>Расчет сразу<br />после оформления</span>
-          </article>
-          <article>
-            <img class="fact-icon" src="assets/icon-shield-3d.png" alt="" aria-hidden="true" />
-            <strong>Работаем с долгами</strong>
-            <span>Берем сложные<br />ситуации в работу</span>
-          </article>
-          <article>
-            <img class="fact-icon" src="assets/icon-people-3d.png" alt="" aria-hidden="true" />
-            <strong>Без посредников</strong>
-            <span>Прямой выкуп<br />доли</span>
-          </article>
-        </div>
-      </section>
-
-      <section class="section" id="buy">
-        <div class="container">
-          <div class="section-heading">
-            <p class="eyebrow">Объекты</p>
-            <h2>Какие доли и объекты мы выкупаем</h2>
-          </div>
-          <div class="object-strip">
-            <article><img class="object-icon" src="assets/icon-object-apartment-3d.png" alt="" aria-hidden="true" /><span>Доли в квартирах</span></article>
-            <article><img class="object-icon" src="assets/icon-object-room-3d.png" alt="" aria-hidden="true" /><span>Комнаты в коммуналках</span></article>
-            <article><img class="object-icon" src="assets/icon-object-conflict-3d.png" alt="" aria-hidden="true" /><span>Доли с конфликтами</span></article>
-            <article><img class="object-icon" src="assets/icon-object-debt-3d.png" alt="" aria-hidden="true" /><span>Доли с долгами</span></article>
-            <article><img class="object-icon" src="assets/icon-object-encumbrance-3d.png" alt="" aria-hidden="true" /><span>С обременениями и арестами</span></article>
-            <article><img class="object-icon" src="assets/icon-object-building-3d.png" alt="" aria-hidden="true" /><span>Квартиры целиком</span></article>
+          <div class="quick-facts" aria-label="Основные преимущества">
+            <div class="facts-grid">
+              <article>
+                <img class="fact-icon" src="assets/icon-fact-cash-ref.png" alt="" aria-hidden="true" />
+                <strong>До 90% от<br />рынка</strong>
+                <span>Честная оценка<br />вашей доли</span>
+              </article>
+              <article>
+                <img class="fact-icon" src="assets/icon-fact-calendar-ref.png" alt="" aria-hidden="true" />
+                <strong>Деньги в день<br />сделки</strong>
+                <span>Расчет сразу<br />после оформления</span>
+              </article>
+              <article>
+                <img class="fact-icon" src="assets/icon-fact-shield-ref.png" alt="" aria-hidden="true" />
+                <strong>Работаем<br />с долгами</strong>
+                <span>Берем сложные<br />ситуации в работу</span>
+              </article>
+              <article>
+                <img class="fact-icon" src="assets/icon-fact-people-ref.png" alt="" aria-hidden="true" />
+                <strong>Без<br />посредников</strong>
+                <span>Прямой выкуп<br />доли</span>
+              </article>
+            </div>
           </div>
         </div>
       </section>
 
-      <section class="section section-soft" id="process">
-        <div class="container">
-          <div class="section-heading">
-            <p class="eyebrow">Сделка</p>
-            <h2>Как проходит выкуп доли</h2>
-          </div>
-          <div class="steps">
-            <article>
-              <span>1</span>
-              <img class="step-icon" src="assets/icon-step-request-3d.png" alt="" aria-hidden="true" />
-              <strong>Вы оставляете заявку</strong>
-              <p>Заполняете форму или звоните по телефону.</p>
-            </article>
-            <article>
-              <span>2</span>
-              <img class="step-icon" src="assets/icon-step-valuation-3d.png" alt="" aria-hidden="true" />
-              <strong>Мы проводим оценку</strong>
-              <p>Смотрим документы, район, долю и ситуацию.</p>
-            </article>
-            <article>
-              <span>3</span>
-              <img class="step-icon" src="assets/icon-step-price-3d.png" alt="" aria-hidden="true" />
-              <strong>Согласовываем цену</strong>
-              <p>Предлагаем понятную сумму без давления.</p>
-            </article>
-            <article>
-              <span>4</span>
-              <img class="step-icon" src="assets/icon-step-deal-3d.png" alt="" aria-hidden="true" />
-              <strong>Выходим на сделку</strong>
-              <p>Оформляем договор у нотариуса.</p>
-            </article>
-            <article>
-              <span>5</span>
-              <img class="step-icon" src="assets/icon-step-money-3d.png" alt="" aria-hidden="true" />
-              <strong>Вы получаете деньги</strong>
-              <p>Наличными или переводом на счет.</p>
-            </article>
-          </div>
-        </div>
-      </section>
+      <section class="reference-lower" aria-label="Условия выкупа долей">
+        <div class="container lower-grid">
+          <section class="objects-card" id="buy" aria-labelledby="buy-title">
+            <h2 id="buy-title">Какие доли и объекты мы выкупаем</h2>
+            <div class="object-strip">
+              <article><img class="object-icon" src="assets/icon-object-apartment-3d.png" alt="" aria-hidden="true" /><span>Доли в<br />квартирах</span></article>
+              <article><img class="object-icon" src="assets/icon-object-room-3d.png" alt="" aria-hidden="true" /><span>Комнаты в<br />коммуналках</span></article>
+              <article><img class="object-icon" src="assets/icon-object-conflict-3d.png" alt="" aria-hidden="true" /><span>Доли с<br />конфликтами</span></article>
+              <article><img class="object-icon" src="assets/icon-object-debt-3d.png" alt="" aria-hidden="true" /><span>Доли с<br />долгами</span></article>
+              <article><img class="object-icon" src="assets/icon-object-encumbrance-3d.png" alt="" aria-hidden="true" /><span>С обременениями<br />и арестами</span></article>
+              <article><img class="object-icon" src="assets/icon-object-building-3d.png" alt="" aria-hidden="true" /><span>Квартиры<br />целиком</span></article>
+            </div>
+          </section>
 
-      <section class="section" id="trust">
-        <div class="container trust-grid">
-          <div class="trust-panel">
-            <p class="eyebrow">Почему нам доверяют</p>
-            <h2>Берем на себя сложные переговоры и оформление</h2>
+          <section class="process-card" id="process" aria-labelledby="process-title">
+            <h2 id="process-title">Как проходит выкуп доли</h2>
+            <div class="steps">
+              <article>
+                <span>1</span>
+                <img class="step-icon" src="assets/icon-step-request-3d.png" alt="" aria-hidden="true" />
+                <strong>Вы оставляете<br />заявку</strong>
+                <p>Заполните форму<br />на сайте или позвоните</p>
+              </article>
+              <article>
+                <span>2</span>
+                <img class="step-icon" src="assets/icon-step-valuation-3d.png" alt="" aria-hidden="true" />
+                <strong>Мы проводим<br />оценку</strong>
+                <p>Анализируем документы<br />и ситуацию</p>
+              </article>
+              <article>
+                <span>3</span>
+                <img class="step-icon" src="assets/icon-step-price-3d.png" alt="" aria-hidden="true" />
+                <strong>Согласовываем<br />цену</strong>
+                <p>Предлагаем лучшую цену<br />на рынке</p>
+              </article>
+              <article>
+                <span>4</span>
+                <img class="step-icon" src="assets/icon-step-deal-3d.png" alt="" aria-hidden="true" />
+                <strong>Выходим<br />на сделку</strong>
+                <p>Оформляем договор<br />у нотариуса</p>
+              </article>
+              <article>
+                <span>5</span>
+                <img class="step-icon" src="assets/icon-step-money-3d.png" alt="" aria-hidden="true" />
+                <strong>Вы получаете<br />деньги</strong>
+                <p>Расчет в день сделки<br />удобным способом</p>
+              </article>
+            </div>
+          </section>
+
+          <aside class="trust-panel" id="trust" aria-labelledby="trust-title">
+            <h2 id="trust-title">Почему нам доверяют</h2>
             <ul>
-              <li><i data-lucide="check-circle-2"></i>Работаем по официальному договору</li>
-              <li><i data-lucide="check-circle-2"></i>Сделка проходит через нотариуса</li>
-              <li><i data-lucide="check-circle-2"></i>Оплата сразу наличными или переводом</li>
-              <li><i data-lucide="check-circle-2"></i>Гарантируем полную конфиденциальность</li>
+              <li><i data-lucide="check"></i>Работаем по официальному договору</li>
+              <li><i data-lucide="check"></i>Сделка через нотариуса</li>
+              <li><i data-lucide="check"></i>Оплата сразу наличными или переводом</li>
+              <li><i data-lucide="check"></i>Гарантируем полную конфиденциальность</li>
             </ul>
-          </div>
-          <div class="contact-panel" id="contacts">
-            <h2>Связаться напрямую</h2>
-            <a href="tel:+79102405566"><i data-lucide="phone"></i>+7 910 240 55 66</a>
-            <a href="mailto:vykup1rf@yandex.ru"><i data-lucide="mail"></i>vykup1rf@yandex.ru</a>
-            <a href="https://выкуп-36.рф"><i data-lucide="globe-2"></i>выкуп-36.рф</a>
-          </div>
+          </aside>
         </div>
       </section>
     </main>
 
-    <footer class="site-footer">
-      <div class="container footer-grid">
-        <div class="footer-brand">
-          <a class="brand footer-logo" href="#top" aria-label="Выкуп долей в Воронеже">
-            <span class="brand-mark" aria-hidden="true">
-              <span class="roof roof-blue"></span>
-              <span class="roof roof-gold"></span>
-              <span class="house-body"></span>
-            </span>
-            <span>
-              <strong>Выкуп долей</strong>
-              <small>в Воронеже</small>
-            </span>
-          </a>
-          <p>
-            Срочный выкуп долей, комнат и проблемной недвижимости в Воронеже.
-            Работаем с долгами, арестами и конфликтными ситуациями.
-          </p>
-        </div>
+    <div class="estimate-modal" id="estimate-modal" role="dialog" aria-modal="true" aria-labelledby="modal-estimate-title" hidden>
+      <div class="estimate-modal-backdrop" data-modal-close></div>
+      <div class="estimate-card estimate-modal-card">
+        <button class="modal-close" type="button" aria-label="Закрыть окно" data-modal-close>
+          <i data-lucide="x"></i>
+        </button>
+        <h2 id="modal-estimate-title">Узнайте цену вашей доли</h2>
+        <form class="estimate-form">
+          <label>
+            <span>Тип объекта</span>
+            <select name="type" required>
+              <option value="">Выберите тип объекта</option>
+              <option>Доля в квартире</option>
+              <option>Комната</option>
+              <option>Доля с долгами</option>
+              <option>Квартира целиком</option>
+            </select>
+          </label>
+          <label>
+            <span>Район</span>
+            <select name="district" required>
+              <option value="">Выберите район</option>
+              <option>Центральный</option>
+              <option>Коминтерновский</option>
+              <option>Ленинский</option>
+              <option>Советский</option>
+              <option>Левобережный</option>
+              <option>Железнодорожный</option>
+              <option>Другой район</option>
+            </select>
+          </label>
+          <label>
+            <span>Площадь доли, м²</span>
+            <input name="area" inputmode="decimal" placeholder="Например, 12,5" required />
+          </label>
+          <label>
+            <span>Телефон</span>
+            <input
+              name="phone"
+              type="tel"
+              inputmode="tel"
+              placeholder="+7 (___) ___-__-__"
+              autocomplete="tel"
+              required
+            />
+          </label>
+          <button class="button button-primary button-full" type="submit">
+            Получить оценку
+            <i data-lucide="send"></i>
+          </button>
+          <p class="form-note"><i data-lucide="lock"></i>Ваши данные защищены и не передаются третьим лицам</p>
+          <p class="form-status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </div>
 
-        <div class="footer-column">
-          <h2>Навигация</h2>
-          <a href="#buy">Что выкупаем</a>
-          <a href="#process">Как проходит сделка</a>
-          <a href="#trust">Преимущества</a>
-          <a href="#contacts">Контакты</a>
+    <footer class="site-footer" id="contacts">
+      <div class="container footer-reference">
+        <div class="footer-benefits">
+          <article>
+            <i data-lucide="file-text"></i>
+            <div><strong>Официальный договор</strong><span>Работаем по договору купли-продажи</span></div>
+          </article>
+          <article>
+            <i data-lucide="user-check"></i>
+            <div><strong>Сделка через нотариуса</strong><span>Юридически чисто и безопасно</span></div>
+          </article>
+          <article>
+            <i data-lucide="wallet"></i>
+            <div><strong>Оплата сразу</strong><span>Наличными или переводом на счет</span></div>
+          </article>
+          <article>
+            <i data-lucide="shield-check"></i>
+            <div><strong>Конфиденциальность</strong><span>Гарантируем полную конфиденциальность</span></div>
+          </article>
         </div>
-
-        <div class="footer-column">
-          <h2>Выкупаем</h2>
-          <span>Доли в квартирах</span>
-          <span>Комнаты в коммуналках</span>
-          <span>Доли с долгами</span>
-          <span>Объекты с арестами</span>
-        </div>
-
-        <div class="footer-column footer-contacts">
-          <h2>Контакты</h2>
+        <div class="footer-contacts-row">
           <a href="tel:+79102405566"><i data-lucide="phone"></i>+7 910 240 55 66</a>
           <a href="mailto:vykup1rf@yandex.ru"><i data-lucide="mail"></i>vykup1rf@yandex.ru</a>
-          <a href="https://выкуп-36.рф"><i data-lucide="globe-2"></i>выкуп-36.рф</a>
-          <a class="footer-cta" href="#estimate">Получить оценку</a>
         </div>
-      </div>
-
-      <div class="container footer-bottom">
-        <p>© 2026 Выкуп долей в Воронеже. Информация на сайте не является публичной офертой.</p>
-        <p>Фото: Timur Mamedrzaev, Wikimedia Commons, CC BY-SA 3.0.</p>
       </div>
     </footer>
   </body>

@@ -1,7 +1,10 @@
 const header = document.querySelector(".site-header");
 const menuToggle = document.querySelector(".menu-toggle");
-const form = document.querySelector(".estimate-form");
-const phoneInput = document.querySelector('input[name="phone"]');
+const estimateModal = document.querySelector(".estimate-modal");
+const estimateTriggers = document.querySelectorAll(".estimate-trigger");
+const modalCloseControls = document.querySelectorAll("[data-modal-close]");
+const forms = document.querySelectorAll(".estimate-form");
+const phoneInputs = document.querySelectorAll('input[name="phone"]');
 
 if (window.lucide) {
   window.lucide.createIcons();
@@ -21,7 +24,7 @@ document.querySelectorAll(".main-nav a").forEach((link) => {
   });
 });
 
-phoneInput?.addEventListener("input", (event) => {
+const formatPhoneInput = (event) => {
   const value = event.target.value.replace(/\D/g, "").replace(/^8/, "7").slice(0, 11);
   const digits = value.startsWith("7") ? value.slice(1) : value;
   const parts = [
@@ -39,13 +42,52 @@ phoneInput?.addEventListener("input", (event) => {
   if (parts[3]) next += `-${parts[3]}`;
 
   event.target.value = next;
+};
+
+phoneInputs.forEach((input) => {
+  input.addEventListener("input", formatPhoneInput);
 });
 
-form?.addEventListener("submit", (event) => {
-  event.preventDefault();
-  const status = form.querySelector(".form-status");
-  status.textContent = "Заявка принята. Специалист свяжется с вами в ближайшее время.";
-  form.reset();
+const openEstimateModal = () => {
+  if (!estimateModal) return;
+  estimateModal.hidden = false;
+  document.body.classList.add("modal-open");
+  header.classList.remove("menu-open");
+  menuToggle?.setAttribute("aria-expanded", "false");
+  window.lucide?.createIcons();
+  estimateModal.querySelector("select, input, button")?.focus();
+};
+
+const closeEstimateModal = () => {
+  if (!estimateModal) return;
+  estimateModal.hidden = true;
+  document.body.classList.remove("modal-open");
+};
+
+estimateTriggers.forEach((trigger) => {
+  trigger.addEventListener("click", (event) => {
+    event.preventDefault();
+    openEstimateModal();
+  });
+});
+
+modalCloseControls.forEach((control) => {
+  control.addEventListener("click", closeEstimateModal);
+});
+
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape" && !estimateModal?.hidden) {
+    closeEstimateModal();
+  }
+});
+
+forms.forEach((form) => {
+  form.addEventListener("submit", (event) => {
+    event.preventDefault();
+    const status = form.querySelector(".form-status");
+    status.textContent = "Заявка принята. Специалист свяжется с вами в ближайшее время.";
+    form.reset();
+  });
 });
 
 const revealItems = document.querySelectorAll(
