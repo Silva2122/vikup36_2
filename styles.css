@@ -2212,7 +2212,7 @@ body.modal-open {
   width: min(1520px, calc(100% - 16px));
   padding: 28px 44px 20px;
   background: #06284e;
-  border-radius: 14px 14px 0 0;
+  border-radius: 14px;
   box-shadow: 0 -8px 28px rgba(6, 40, 78, 0.18);
 }
 
@@ -2467,7 +2467,7 @@ body.modal-open {
   .footer-reference {
     width: min(100% - 16px, 1200px);
     padding: 22px 18px 20px;
-    border-radius: 12px 12px 0 0;
+    border-radius: 12px;
   }
 
   .footer-benefits {
