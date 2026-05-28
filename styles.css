@@ -89,6 +89,21 @@ select {
   font: inherit;
 }
 
+select {
+  appearance: none;
+  -webkit-appearance: none;
+  background-image:
+    linear-gradient(45deg, transparent 50%, currentColor 50%),
+    linear-gradient(135deg, currentColor 50%, transparent 50%);
+  background-position:
+    calc(100% - 18px) 50%,
+    calc(100% - 11px) 50%;
+  background-repeat: no-repeat;
+  background-size:
+    8px 8px,
+    8px 8px;
+}
+
 .container {
   width: min(1240px, calc(100% - 32px));
   margin: 0 auto;
@@ -1158,12 +1173,12 @@ h2 {
 }
 
 .site-header {
-  grid-template-columns: 220px minmax(460px, 1fr) auto auto;
-  gap: 24px;
+  grid-template-columns: 190px minmax(0, 1fr) auto auto;
+  gap: 18px;
   min-height: 96px;
   width: 100%;
   margin: 0;
-  padding: 10px 40px;
+  padding: 10px 28px;
   background: #fff;
   border: 0;
   border-bottom: 1px solid #dfe7ee;
@@ -1177,14 +1192,14 @@ h2 {
 
 .brand-logo {
   display: block;
-  width: 190px;
+  width: 170px;
   height: auto;
   object-fit: contain;
 }
 
 .main-nav {
   min-width: 0;
-  gap: clamp(20px, 2.2vw, 34px);
+  gap: clamp(18px, 1.8vw, 30px);
   color: var(--blue);
   font-size: 14px;
   font-weight: 700;
@@ -1215,7 +1230,7 @@ h2 {
 .header-contacts {
   display: grid;
   gap: 4px;
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 700;
   line-height: 1.12;
   white-space: nowrap;
@@ -1223,8 +1238,8 @@ h2 {
 
 .header-cta {
   min-height: 56px;
-  min-width: 178px;
-  padding: 0 24px;
+  min-width: 168px;
+  padding: 0 22px;
   border-radius: 7px;
   background: var(--green);
   box-shadow: 0 10px 20px rgba(47, 163, 49, 0.22);
@@ -1398,13 +1413,14 @@ h1 span {
 .hero .estimate-form input,
 .hero .estimate-form select {
   min-height: 56px;
-  padding: 20px 16px 5px;
+  padding: 24px 42px 7px 16px;
   color: var(--blue);
-  background: #fff;
+  background-color: #fff;
   border-color: #dce5ec;
   border-radius: 7px;
   font-size: var(--type-control);
   font-weight: 500;
+  line-height: 1.1;
 }
 
 .hero .estimate-form label span {
@@ -1498,13 +1514,14 @@ h1 span {
 .estimate-modal-card .estimate-form input,
 .estimate-modal-card .estimate-form select {
   min-height: 58px;
-  padding: 22px 18px 7px;
+  padding: 24px 42px 8px 18px;
   color: var(--blue);
-  background: #fff;
+  background-color: #fff;
   border-color: #dce5ec;
   border-radius: 8px;
   font-size: 17px;
   font-weight: 600;
+  line-height: 1.1;
 }
 
 .estimate-modal-card .estimate-form label span {
