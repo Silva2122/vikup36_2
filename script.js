@@ -18,9 +18,26 @@ menuToggle?.addEventListener("click", () => {
 });
 
 document.querySelectorAll(".main-nav a").forEach((link) => {
-  link.addEventListener("click", () => {
+  link.addEventListener("click", (event) => {
+    const hash = link.getAttribute("href");
     header.classList.remove("menu-open");
     menuToggle?.setAttribute("aria-expanded", "false");
+
+    if (!hash?.startsWith("#")) return;
+
+    const target = document.querySelector(hash);
+    if (!target) return;
+
+    event.preventDefault();
+
+    const headerHeight = Math.ceil(header.getBoundingClientRect().height);
+    const top =
+      hash === "#top"
+        ? 0
+        : Math.max(0, window.scrollY + target.getBoundingClientRect().top - headerHeight - 18);
+
+    window.scrollTo({ top, behavior: "smooth" });
+    window.history.pushState(null, "", hash);
   });
 });
 
