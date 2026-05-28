@@ -1972,12 +1972,13 @@ body.modal-open {
 
 .objects-card .object-strip span {
   width: 100%;
-  max-width: 150px;
+  max-width: min(100%, 12ch);
   color: var(--blue);
   font-size: var(--type-card-title);
   font-weight: 700;
   line-height: 1.16;
-  overflow-wrap: break-word;
+  hyphens: auto;
+  overflow-wrap: anywhere;
   text-wrap: balance;
 }
 
