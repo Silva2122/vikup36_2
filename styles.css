@@ -1239,7 +1239,7 @@ h2 {
 }
 
 .site-header {
-  grid-template-columns: 190px minmax(0, 1fr) auto auto;
+  grid-template-columns: 210px minmax(0, 1fr) auto auto;
   gap: 18px;
   min-height: 96px;
   width: 100%;
@@ -1258,7 +1258,7 @@ h2 {
 
 .brand-logo {
   display: block;
-  width: 170px;
+  width: 190px;
   height: auto;
   object-fit: contain;
 }
@@ -1313,7 +1313,7 @@ h2 {
 
 @media (max-width: 1320px) {
   .site-header {
-    grid-template-columns: 170px minmax(0, 1fr) auto;
+    grid-template-columns: 190px minmax(0, 1fr) auto;
     gap: 16px;
   }
 
@@ -1322,7 +1322,7 @@ h2 {
   }
 
   .brand-logo {
-    width: 160px;
+    width: 180px;
   }
 }
 
