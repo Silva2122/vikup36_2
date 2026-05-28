@@ -1941,6 +1941,7 @@ body.modal-open {
   justify-items: center;
   align-content: start;
   gap: 8px;
+  min-width: 0;
   min-height: 132px;
   padding: 6px 16px 2px;
   text-align: center;
@@ -1970,11 +1971,14 @@ body.modal-open {
 }
 
 .objects-card .object-strip span {
+  width: 100%;
   max-width: 150px;
   color: var(--blue);
   font-size: var(--type-card-title);
   font-weight: 700;
   line-height: 1.16;
+  overflow-wrap: break-word;
+  text-wrap: balance;
 }
 
 .process-card {
@@ -2234,6 +2238,22 @@ body.modal-open {
   width: 28px;
   height: 28px;
   color: rgba(255, 255, 255, 0.9);
+}
+
+@media (max-width: 1500px) and (min-width: 981px) {
+  .objects-card .object-strip {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    row-gap: 14px;
+  }
+
+  .objects-card .object-strip article {
+    min-height: 124px;
+    padding-inline: 12px;
+  }
+
+  .objects-card .object-strip article:nth-child(4)::before {
+    display: none;
+  }
 }
 
 @media (max-width: 980px) {
