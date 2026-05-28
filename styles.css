@@ -1311,6 +1311,21 @@ h2 {
   box-shadow: 0 10px 20px rgba(47, 163, 49, 0.22);
 }
 
+@media (max-width: 1320px) {
+  .site-header {
+    grid-template-columns: 170px minmax(0, 1fr) auto;
+    gap: 16px;
+  }
+
+  .header-contacts {
+    display: none;
+  }
+
+  .brand-logo {
+    width: 160px;
+  }
+}
+
 .hero {
   padding: 0 0 0;
   background: #f5f8fb;
