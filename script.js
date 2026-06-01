@@ -99,11 +99,33 @@ document.addEventListener("keydown", (event) => {
 });
 
 forms.forEach((form) => {
-  form.addEventListener("submit", (event) => {
+  form.addEventListener("submit", async (event) => {
     event.preventDefault();
     const status = form.querySelector(".form-status");
-    status.textContent = "Заявка принята. Специалист свяжется с вами в ближайшее время.";
-    form.reset();
+    const submitButton = form.querySelector('button[type="submit"]');
+
+    status.textContent = "Отправляем заявку...";
+    submitButton.disabled = true;
+
+    try {
+      const response = await fetch(form.action, {
+        method: "POST",
+        body: new FormData(form),
+        headers: { Accept: "application/json" },
+      });
+      const result = await response.json();
+
+      status.textContent =
+        result.message || "Заявка принята. Специалист свяжется с вами в ближайшее время.";
+
+      if (response.ok && result.ok) {
+        form.reset();
+      }
+    } catch (error) {
+      status.textContent = "Не удалось отправить заявку. Попробуйте позвонить.";
+    } finally {
+      submitButton.disabled = false;
+    }
   });
 });
 
