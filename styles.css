@@ -33,6 +33,7 @@
   --type-card-body: 14px;
   --type-meta: 13px;
   --type-control: 15px;
+  --desktop-side-card: 360px;
   --weight-regular: 400;
   --weight-medium: 500;
   --weight-semibold: 600;
@@ -1251,7 +1252,7 @@ h2 {
 }
 
 .site-header {
-  grid-template-columns: 210px minmax(0, 1fr) auto auto;
+  grid-template-columns: 300px minmax(0, 1fr) auto auto;
   gap: 18px;
   min-height: 96px;
   width: 100%;
@@ -1270,7 +1271,7 @@ h2 {
 
 .brand-logo {
   display: block;
-  width: 190px;
+  width: 290px;
   height: auto;
   object-fit: contain;
 }
@@ -1325,7 +1326,7 @@ h2 {
 
 @media (max-width: 1320px) {
   .site-header {
-    grid-template-columns: 190px minmax(0, 1fr) auto;
+    grid-template-columns: 265px minmax(0, 1fr) auto;
     gap: 16px;
   }
 
@@ -1334,7 +1335,7 @@ h2 {
   }
 
   .brand-logo {
-    width: 180px;
+    width: 255px;
   }
 }
 
@@ -1372,7 +1373,7 @@ h2 {
   position: relative;
   isolation: isolate;
   display: grid;
-  grid-template-columns: minmax(0, 840px) minmax(320px, 350px);
+  grid-template-columns: minmax(0, 840px) var(--desktop-side-card);
   justify-content: space-between;
   column-gap: 60px;
   row-gap: 20px;
@@ -1493,7 +1494,7 @@ h1 span {
   grid-row: 1 / span 2;
   justify-self: end;
   width: 100%;
-  max-width: 350px;
+  max-width: var(--desktop-side-card);
   margin-top: 0;
   padding: 28px 24px 24px;
   color: #fff;
@@ -1801,7 +1802,7 @@ body.modal-open {
   }
 
   .brand-logo {
-    width: 160px;
+    width: 235px;
   }
 
   .header-contacts {
@@ -1941,10 +1942,11 @@ body.modal-open {
 
 .lower-grid {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) 360px;
+  grid-template-columns: minmax(0, 1fr) var(--desktop-side-card);
   gap: 24px 36px;
   align-items: start;
-  width: min(1520px, calc(100% - 56px));
+  width: min(1520px, calc(100% - 12px));
+  padding: 0 58px;
 }
 
 .objects-card,
@@ -2319,6 +2321,7 @@ body.modal-open {
   .lower-grid {
     grid-template-columns: 1fr;
     width: min(100% - 32px, 1200px);
+    padding: 0;
   }
 
   .objects-card,
