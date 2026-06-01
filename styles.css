@@ -1002,7 +1002,7 @@ h2 {
   line-height: var(--leading-body);
 }
 
-@media (max-width: 980px) {
+@media (max-width: 1320px) {
   .site-header {
     grid-template-columns: auto 1fr auto;
   }
