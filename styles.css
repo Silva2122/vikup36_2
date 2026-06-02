@@ -1278,7 +1278,9 @@ h2 {
 
 .main-nav {
   min-width: 0;
-  gap: clamp(18px, 1.8vw, 30px);
+  overflow: hidden;
+  justify-content: flex-start;
+  gap: clamp(14px, 1.25vw, 28px);
   color: var(--blue);
   font-size: 14px;
   font-weight: 700;
@@ -1286,7 +1288,12 @@ h2 {
 }
 
 .main-nav a {
+  flex: 0 0 auto;
   padding: 12px 0;
+}
+
+.main-nav a[href="#contacts"] {
+  display: none;
 }
 
 .main-nav a::after {
